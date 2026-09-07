@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lưu Tuấn Hải — Cosmic English Tutor & Portfolio | Starlight Spectrum</title>
+  <meta name="description" content="Portfolio của Lưu Tuấn Hải - Gia sư tiếng Anh cấp 1, cấp 2 tận tâm, FTUer Quản trị kinh doanh quốc tế CLC, IELTS 7.5, Điểm 10 thi vào 10 & THPTQG. Không gian học tập an toàn, truyền cảm hứng.">
+  
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Dynamic Interactive Starfield Canvas -->
+  <canvas id="starfield-canvas"></canvas>
+
+  <!-- Ambient Cosmic Nebulae -->
+  <div class="cosmic-nebula-bg"></div>
+
+  <!-- Page Main Container -->
+  <div class="app-container">
+
+    <!-- Sticky Navigation Header -->
+    <header class="site-header">
+      <a href="#" class="brand-logo">
+        <div class="brand-glyph">✦</div>
+        <span>Tuấn Hải <span class="text-gradient">.Cosmos</span></span>
+      </a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about" data-i18n="nav-about">Về tôi</a></li>
+        <li><a href="#education" data-i18n="nav-education">Học vấn</a></li>
+        <li><a href="#services" data-i18n="nav-services">Khóa học</a></li>
+        <li><a href="#experience" data-i18n="nav-experience">Kinh nghiệm</a></li>
+        <li><a href="#quiz" data-i18n="nav-quiz">Lộ trình học</a></li>
+        <li><a href="#contact" data-i18n="nav-contact">Liên hệ</a></li>
+      </ul>
+
+      <div class="nav-controls">
+        <!-- Pride Aura Switcher Dropdown -->
+        <div class="aura-dropdown">
+          <button class="ctrl-btn" id="aura-btn" title="Choose Pride Aura Theme">
+            <span>🌈</span> Aura
+          </button>
+          <ul class="aura-menu" id="aura-menu">
+            <li class="aura-option selected" data-value="rainbow">
+              <span class="aura-dot dot-rainbow"></span> Classic Pride 6-Stripe
+            </li>
+            <li class="aura-option" data-value="progress">
+              <span class="aura-dot dot-progress"></span> Progress Pride
+            </li>
+            <li class="aura-option" data-value="bisexual">
+              <span class="aura-dot dot-bi"></span> Bisexual Galaxy
+            </li>
+            <li class="aura-option" data-value="transgender">
+              <span class="aura-dot dot-trans"></span> Trans Starlight
+            </li>
+            <li class="aura-option" data-value="nonbinary">
+              <span class="aura-dot dot-nb"></span> Non-Binary Cosmos
+            </li>
+            <li class="aura-option" data-value="pansexual">
+              <span class="aura-dot dot-pan"></span> Pan Stardust
+            </li>
+          </ul>
+        </div>
+
+        <!-- Language Switcher -->
+        <button class="ctrl-btn" id="lang-toggle-btn" title="Chuyển đổi ngôn ngữ">
+          🌐 VI / EN
+        </button>
+
+        <!-- Sound Toggle -->
+        <button class="ctrl-btn" id="sound-toggle-btn" title="Cosmic Chimes Audio">
+          🔊 Sound: On
+        </button>
+
+        <!-- Mobile Menu Hamburger -->
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Open Navigation Menu">
+          ☰
+        </button>
+      </div>
+    </header>
+
+    <!-- ====================================================================
+         HERO SECTION
+         ==================================================================== -->
+    <section class="hero-section" id="hero">
+      <div class="hero-content">
+        <div class="badge-rainbow" data-i18n="hero-badge">
+          ✨ English Tutor & Educational Creator
+        </div>
+
+        <h1 class="hero-title">
+          <span style="font-weight: 400; font-size: 0.7em; display: block;" data-i18n="hero-title-prefix">Xin chào, tôi là</span>
+          <span class="text-gradient" data-i18n="hero-title-name">Lưu Tuấn Hải</span>
+        </h1>
+
+        <div class="hero-subtitle" data-i18n="hero-subtitle">
+          ✦ Gia Sư Tiếng Anh Cấp 1, Cấp 2 | FTU Chất Lượng Cao
+        </div>
+
+        <p class="hero-description" data-i18n="hero-description">
+          Đồng hành cùng các bạn học sinh tìm lại niềm vui và sự say mê tiếng Anh. Hệ thống kiến thức cốt lõi vững chắc, thành thạo kỹ năng giải đề, tự tin bứt phá điểm 8+, 9+, 10 trong các bài thi và kỳ thi chuyển cấp.
+        </p>
+
+        <div class="hero-badges-row">
+          <span class="skill-tag">🌈 LGBTQ+ Inclusive & Safe Space</span>
+          <span class="skill-tag">🎯 Luyện thi Vào 10 Chuyên & Công Lập</span>
+          <span class="skill-tag">📖 Cá nhân hóa Lộ trình</span>
+        </div>
+
+        <div class="hero-actions">
+          <a href="#quiz" class="btn-primary" data-i18n="hero-cta-explore">
+            🚀 Khám phá lộ trình
+          </a>
+          <a href="#contact" class="btn-secondary" data-i18n="hero-cta-contact">
+            💬 Tư vấn học tập
+          </a>
+        </div>
+      </div>
+
+      <!-- Hero Avatar with Celestial Orbital Rings -->
+      <div class="hero-avatar-wrapper">
+        <div class="orbit-ring">
+          <div class="orbit-planet"></div>
+          <div class="orbit-planet-2"></div>
+        </div>
+
+        <div class="avatar-card">
+          <img src="assets/images/profile.jpg" alt="Lưu Tuấn Hải - Portrait">
+          <div class="avatar-badge-float">
+            <div class="name">Lưu Tuấn Hải (2006)</div>
+            <div class="title">FTU Honors & English Tutor</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         KEY STATS STRIP
+         ==================================================================== -->
+    <div class="stats-strip">
+      <div class="stat-box glass-panel">
+        <div class="stat-number">7.5</div>
+        <div class="stat-label" data-i18n="stat-ielts">7.5 IELTS Overall</div>
+        <div class="stat-sub" data-i18n="stat-ielts-sub">Listening 8.5 | Reading 7.5</div>
+      </div>
+
+      <div class="stat-box glass-panel">
+        <div class="stat-number">10.0</div>
+        <div class="stat-label" data-i18n="stat-grade10">Điểm 10.0 Tuyệt Đối</div>
+        <div class="stat-sub" data-i18n="stat-grade10-sub">Vào 10 & Miễn thi THPTQG</div>
+      </div>
+
+      <div class="stat-box glass-panel">
+        <div class="stat-number">3.49</div>
+        <div class="stat-label" data-i18n="stat-ftu">GPA 3.49 / 4.0</div>
+        <div class="stat-sub" data-i18n="stat-ftu-sub">FTU Quản trị KD Quốc tế CLC</div>
+      </div>
+
+      <div class="stat-box glass-panel">
+        <div class="stat-number">2+ Năm</div>
+        <div class="stat-label" data-i18n="stat-experience">Kinh Nghiệm</div>
+        <div class="stat-sub" data-i18n="stat-experience-sub">Biên soạn học thuật & Mentor</div>
+      </div>
+    </div>
+
+    <!-- ====================================================================
+         ABOUT & TEACHING PHILOSOPHY SECTION
+         ==================================================================== -->
+    <section class="section-wrapper" id="about">
+      <div class="section-header">
+        <span class="section-subtitle" data-i18n="about-sub">Triết lý giảng dạy & Giá trị cốt lõi</span>
+        <h2 class="section-title text-gradient" data-i18n="about-title">Mỗi học sinh là một vì sao mang dải màu riêng biệt</h2>
+        <p class="section-desc" data-i18n="about-desc">
+          Em tin rằng việc học ngoại ngữ không nên là áp lực hay nhồi nhét máy móc. Bằng sự kiên nhẫn, gần gũi và một không gian học tập an toàn, tôn trọng bản sắc của từng em, việc học tiếng Anh sẽ trở thành hành trình khám phá đầy tự tin và hứng khởi.
+        </p>
+      </div>
+
+      <div class="about-grid">
+        <!-- Core Philosophy Card -->
+        <div class="glass-panel about-card">
+          <h3 class="text-cyan" style="margin-bottom: 12px;">🌟 Giá Trị Sư Phạm Khác Biệt</h3>
+          <div class="about-quote">
+            "Không có học sinh không thể học tiếng Anh, chỉ có học sinh chưa tìm thấy phương pháp và người đồng hành phù hợp để thắp sáng ngọn lửa say mê trong mình."
+          </div>
+
+          <ul class="philosophy-list">
+            <li class="philosophy-item">
+              <div class="philo-icon">💖</div>
+              <div class="philo-text">
+                <h4 data-i18n="philo-1-title">Kiên nhẫn & Truyền cảm hứng</h4>
+                <p data-i18n="philo-1-desc">Lắng nghe tâm lý học sinh, biến những cấu trúc ngữ pháp khô khan thành câu chuyện sinh động và dễ ghi nhớ.</p>
+              </div>
+            </li>
+
+            <li class="philosophy-item">
+              <div class="philo-icon">🎯</div>
+              <div class="philo-text">
+                <h4 data-i18n="philo-2-title">Lộ trình học tập cá nhân hóa</h4>
+                <p data-i18n="philo-2-desc">Thiết kế giáo án dựa trên năng lực thực tế, điểm mạnh và điểm yếu riêng biệt của từng bạn học sinh.</p>
+              </div>
+            </li>
+
+            <li class="philosophy-item">
+              <div class="philo-icon">🌈</div>
+              <div class="philo-text">
+                <h4 data-i18n="philo-3-title">Môi trường học tập cởi mở & Tôn trọng (Safe Space)</h4>
+                <p data-i18n="philo-3-desc">Khuyến khích các em tự do đặt câu hỏi, không sợ mắc lỗi sai, tôn trọng sự đa dạng và nuôi dưỡng sự tự tin của trẻ.</p>
+              </div>
+            </li>
+
+            <li class="philosophy-item">
+              <div class="philo-icon">🤝</div>
+              <div class="philo-text">
+                <h4 data-i18n="philo-4-title">Đồng hành chặt chẽ cùng phụ huynh</h4>
+                <p data-i18n="philo-4-desc">Cập nhật báo cáo tiến độ chi tiết định kỳ sau mỗi tuần/tháng, tư vấn tâm lý thi cử cho học sinh.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Skills Clusters Card -->
+        <div class="skills-grid">
+          <div class="glass-panel skill-category">
+            <h4 class="skill-category-title text-purple" data-i18n="skills-academic-title">
+              📚 Kỹ Năng Chuyên Môn Cốt Lõi
+            </h4>
+            <div class="skill-tags-cloud">
+              <span class="skill-tag">Cấu trúc đề thi Tiếng Anh vào 10</span>
+              <span class="skill-tag">Hệ thống hóa ngữ pháp trọng tâm</span>
+              <span class="skill-tag">Từ vựng chuyên đề & Collocations</span>
+              <span class="skill-tag">Kỹ năng giải đề & Quét bẫy trắc nghiệm</span>
+              <span class="skill-tag">Phát âm chuẩn IPA căn bản</span>
+              <span class="skill-tag">Kỹ thuật đọc hiểu Skimming & Scanning</span>
+            </div>
+          </div>
+
+          <div class="glass-panel skill-category">
+            <h4 class="skill-category-title text-pink" data-i18n="skills-pedagogy-title">
+              🌱 Kỹ Năng Sư Phạm & Phương Pháp
+            </h4>
+            <div class="skill-tags-cloud">
+              <span class="skill-tag">Truyền đạt dễ hiểu & trực quan</span>
+              <span class="skill-tag">Tạo động lực học tập tích cực</span>
+              <span class="skill-tag">Theo dõi tiến độ định kỳ</span>
+              <span class="skill-tag">Tâm lý học sinh lứa tuổi 8 - 15</span>
+              <span class="skill-tag">Thấu hiểu & Đồng hành kiên nhẫn</span>
+            </div>
+          </div>
+
+          <div class="glass-panel skill-category">
+            <h4 class="skill-category-title text-cyan" data-i18n="skills-tools-title">
+              💻 Công Cụ & Số Hóa Bài Giảng
+            </h4>
+            <div class="skill-tags-cloud">
+              <span class="skill-tag">Microsoft PowerPoint / Word bài tập</span>
+              <span class="skill-tag">Google Docs & Google Classroom</span>
+              <span class="skill-tag">Quizizz & Kahoot tương tác</span>
+              <span class="skill-tag">Flashcard số hóa Anki / Quizlet</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         ACADEMIC MILESTONES (TIMELINE)
+         ==================================================================== -->
+    <section class="section-wrapper" id="education">
+      <div class="section-header">
+        <span class="section-subtitle" data-i18n="edu-sub">Hành trình học tập & Dấu ấn xuất sắc</span>
+        <h2 class="section-title text-gradient" data-i18n="edu-title">Trình Độ Học Vấn & Thành Tích</h2>
+        <p class="section-desc" data-i18n="edu-desc">
+          Nền tảng học thuật vững chắc là bảo chứng cao nhất cho chất lượng kiến thức và phương pháp truyền thụ.
+        </p>
+      </div>
+
+      <div class="timeline-container">
+        <!-- Timeline Item 1: FTU -->
+        <div class="timeline-item left">
+          <div class="timeline-node"></div>
+          <div class="glass-panel timeline-card">
+            <span class="timeline-date">2024 - 2028 (Hiện tại)</span>
+            <h3 class="timeline-school">Đại Học Ngoại Thương (FTU)</h3>
+            <div class="timeline-major">Quản trị Kinh doanh Quốc tế — Chương trình Chất lượng cao</div>
+            <ul class="timeline-highlights">
+              <li>✦ GPA hiện tại: <strong>3.49 / 4.0</strong> — Xếp loại Giỏi</li>
+              <li>✦ Tiếng Anh chuyên ngành 3: <strong>Điểm A (TB 9.4/10)</strong></li>
+              <li>✦ Tiếng Anh chuyên ngành 4: <strong>Điểm A (TB 8.5/10)</strong></li>
+              <li>✦ Môi trường học tập năng động, rèn luyện tư duy phản biện và khả năng ứng dụng ngoại ngữ học thuật thực tế.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Timeline Item 2: THPT Kim Liên -->
+        <div class="timeline-item right">
+          <div class="timeline-node"></div>
+          <div class="glass-panel timeline-card">
+            <span class="timeline-date">2021 - 2024</span>
+            <h3 class="timeline-school">THPT Kim Liên</h3>
+            <div class="timeline-major">Trường THPT Top đầu Thủ Đô Hà Nội</div>
+            <ul class="timeline-highlights">
+              <li>✦ <strong>Điểm thi Tiếng Anh vào 10: 10.0 tuyệt đối</strong></li>
+              <li>✦ <strong>Chứng chỉ IELTS: 7.5 Overall</strong> (Listening: 8.5, Reading: 7.5, Writing: 7.0, Speaking: 6.0)</li>
+              <li>✦ Được <strong>miễn thi môn Tiếng Anh THPTQG</strong> nhờ quy đổi IELTS thành điểm 10</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Timeline Item 3: THCS Bế Văn Đàn -->
+        <div class="timeline-item left">
+          <div class="timeline-node"></div>
+          <div class="glass-panel timeline-card">
+            <span class="timeline-date">2017 - 2021</span>
+            <h3 class="timeline-school">THCS Bế Văn Đàn</h3>
+            <div class="timeline-major">Nền tảng Ngữ Pháp & Bứt Phá Cấp 2</div>
+            <ul class="timeline-highlights">
+              <li>✦ GPA Tiếng Anh Lớp 6: <strong>9.3 / 10</strong></li>
+              <li>✦ GPA Tiếng Anh Lớp 7: <strong>9.6 / 10</strong></li>
+              <li>✦ GPA Tiếng Anh Lớp 8: <strong>9.2 / 10</strong></li>
+              <li>✦ GPA Tiếng Anh Lớp 9: <strong>9.1 / 10</strong></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Timeline Item 4: Tiểu học Nam Thành Công -->
+        <div class="timeline-item right">
+          <div class="timeline-node"></div>
+          <div class="glass-panel timeline-card">
+            <span class="timeline-date">2012 - 2017</span>
+            <h3 class="timeline-school">Tiểu Học Nam Thành Công</h3>
+            <div class="timeline-major">Khởi đầu niềm đam mê Ngôn Ngữ</div>
+            <ul class="timeline-highlights">
+              <li>✦ <strong>GPA môn Tiếng Anh các lớp 3, 4, 5 đều đạt: 10.0 tuyệt đối</strong></li>
+              <li>✦ Xây dựng tình yêu học tiếng Anh tự nhiên từ những năm đầu tiểu học</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         TEACHING SERVICES & PACKAGES
+         ==================================================================== -->
+    <section class="section-wrapper" id="services">
+      <div class="section-header">
+        <span class="section-subtitle" data-i18n="services-sub">Các gói gia sư & Lộ trình đào tạo</span>
+        <h2 class="section-title text-gradient" data-i18n="services-title">Các Chương Trình Học Trọng Tâm</h2>
+        <p class="section-desc" data-i18n="services-desc">
+          Lộ trình được thiết kế chuẩn mực theo chương trình của Bộ Giáo dục & chuẩn khảo thí quốc tế, đảm bảo sự tiến bộ rõ rệt qua từng tháng.
+        </p>
+      </div>
+
+      <div class="services-grid">
+        <!-- Package 1: Cấp 1 -->
+        <div class="glass-panel service-card">
+          <div>
+            <div class="service-icon">🌱</div>
+            <h3 class="service-title">Bứt Phá Cấp 1</h3>
+            <div class="service-target">Dành cho học sinh Lớp 3 – Lớp 5</div>
+            <p class="service-desc">
+              Xây dựng nền móng tiếng Anh vững chắc, khơi gợi niềm yêu thích tự nhiên, rèn phát âm chuẩn và làm quen với cấu trúc đề thi chuyển cấp vào lớp 6 CLC.
+            </p>
+            <ul class="service-points">
+              <li><span>✓</span> Chuẩn hóa phát âm IPA cơ bản</li>
+              <li><span>✓</span> Vốn từ vựng chủ đề sinh động kèm hình ảnh</li>
+              <li><span>✓</span> Nắm chắc ngữ pháp nền tảng SGK</li>
+              <li><span>✓</span> Luyện đề kiểm tra định kỳ đạt điểm 9 - 10</li>
+            </ul>
+          </div>
+          <a href="#contact" class="btn-secondary" style="width: 100%; text-align: center;">Đăng Ký Khóa Học</a>
+        </div>
+
+        <!-- Package 2: Cấp 2 Cơ bản & Nâng cao -->
+        <div class="glass-panel service-card">
+          <div>
+            <div class="service-icon">⚡</div>
+            <h3 class="service-title">Vững Vàng Cấp 2</h3>
+            <div class="service-target">Dành cho học sinh Lớp 6 – Lớp 8</div>
+            <p class="service-desc">
+              Hệ thống hóa toàn bộ các thì và cấu trúc câu phức tạp, mở rộng vốn từ học thuật, nâng cao kỹ năng đọc hiểu và viết lại câu chuẩn văn phong.
+            </p>
+            <ul class="service-points">
+              <li><span>✓</span> Quét sạch lỗ hổng ngữ pháp trọng tâm</li>
+              <li><span>✓</span> Rèn kỹ năng đọc hiểu & phân tích ngữ cảnh</li>
+              <li><span>✓</span> Thành thạo các dạng bài biến đổi câu</li>
+              <li><span>✓</span> Cam kết nâng điểm tổng kết lên 8.5+</li>
+            </ul>
+          </div>
+          <a href="#contact" class="btn-secondary" style="width: 100%; text-align: center;">Đăng Ký Khóa Học</a>
+        </div>
+
+        <!-- Package 3: Vào 10 Chuyên Sâu (FEATURED) -->
+        <div class="glass-panel service-card featured">
+          <div class="service-badge-hot">HOT & TRỌNG TÂM</div>
+          <div>
+            <div class="service-icon">🏆</div>
+            <h3 class="service-title text-gradient">Luyện Thi Vào 10</h3>
+            <div class="service-target">Dành riêng cho học sinh Lớp 9</div>
+            <p class="service-desc">
+              Khóa học chuyên sâu bám sát ma trận đề thi tuyển sinh vào 10 Hà Nội (công lập & chuyên). Bí quyết đạt điểm 10 tuyệt đối từ chính thủ khoa đầu vào.
+            </p>
+            <ul class="service-points">
+              <li><span>✓</span> Chiến thuật giải đề thần tốc & quản lý thời gian</li>
+              <li><span>✓</span> Quét sạch các bẫy khó (Phrasal verbs, Idioms)</li>
+              <li><span>✓</span> Bộ đề độc quyền phân loại theo từng mức điểm</li>
+              <li><span>✓</span> <strong>Cam kết bứt phá điểm 8+, 9+, 10</strong></li>
+            </ul>
+          </div>
+          <a href="#contact" class="btn-primary" style="width: 100%; text-align: center;">Đăng Ký Tư Vấn Ngay</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         WORK EXPERIENCE & LEADERSHIP
+         ==================================================================== -->
+    <section class="section-wrapper" id="experience">
+      <div class="section-header">
+        <span class="section-subtitle" data-i18n="exp-sub">Kinh nghiệm thực chiến & Sáng tạo nội dung</span>
+        <h2 class="section-title text-gradient" data-i18n="exp-title">Kinh Nghiệm Làm Việc & Hoạt Động</h2>
+        <p class="section-desc" data-i18n="exp-desc">
+          Kinh nghiệm quản lý bộ phận Marketing học thuật và hoạt động ngoại khóa tại các câu lạc bộ uy tín.
+        </p>
+      </div>
+
+      <div class="exp-grid">
+        <!-- Experience Card: S4E Education -->
+        <div class="glass-panel exp-card">
+          <span class="exp-role-badge">MARKETING LEAD & ACADEMIC CONTENT</span>
+          <h3 class="exp-org">Trung Tâm Tiếng Anh S4E Education</h3>
+          <div class="exp-tenure">Chuyên Luyện Thi SAT & IELTS | 06/2024 – 02/2026</div>
+          <p style="color: var(--accent-cyan); font-weight: 600; margin-bottom: 12px;">
+            Trưởng bộ phận Marketing (09/2025 – 02/2026) | Nhân sự Marketing (06/2024 – 02/2026)
+          </p>
+          <ul class="exp-bullets">
+            <li>Biên soạn nội dung học thuật chuyên sâu (hệ thống từ vựng, ngữ pháp, phương pháp làm bài SAT/IELTS) và phụ trách truyền thông về các khóa học trên Fanpage Facebook.</li>
+            <li>Xây dựng và quản lý các kênh chia sẻ tài liệu học tập tiếng Anh miễn phí trên Discord và Facebook Group với hàng ngàn thành viên.</li>
+            <li>Rèn luyện khả năng biên tập nội dung giáo dục súc tích, dễ tiếp cận và phương pháp truyền cảm hứng học tập đến cộng đồng học sinh.</li>
+          </ul>
+        </div>
+
+        <!-- Experience Card: KEC -->
+        <div class="glass-panel exp-card">
+          <span class="exp-role-badge" style="background: rgba(6, 182, 212, 0.15); color: var(--accent-cyan); border-color: rgba(6, 182, 212, 0.3);">
+            HEAD OF HR & TRANSLATOR
+          </span>
+          <h3 class="exp-org">Kimlien English Club (KEC)</h3>
+          <div class="exp-tenure">Câu Lạc Bộ Tiếng Anh THPT Kim Liên | 2021 – 2023</div>
+          <p style="color: var(--accent-pink); font-weight: 600; margin-bottom: 12px;">
+            Trưởng ban Nhân sự (2022 – 2023) | TV Ban Chuyên môn & Nhân sự (2021 – 2022)
+          </p>
+          <ul class="exp-bullets">
+            <li>Đảm nhận vai trò biên dịch song ngữ Việt - Anh cho toàn bộ các ấn phẩm truyền thông, bài viết học thuật và sự kiện của CLB.</li>
+            <li>Tổng hợp tài liệu học tiếng Anh đa chủ đề, tổ chức các buổi workshop chia sẻ phương pháp ôn thi chứng chỉ và tuyển sinh cho học sinh.</li>
+            <li>Điều phối nhân sự, phát triển tinh thần làm việc nhóm và môi trường sinh hoạt câu lạc bộ cởi mở, sáng tạo.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         INTERACTIVE STUDY PATH FINDER QUIZ
+         ==================================================================== -->
+    <section class="section-wrapper" id="quiz">
+      <div class="section-header">
+        <span class="section-subtitle" data-i18n="quiz-sub">Công cụ gợi ý lộ trình</span>
+        <h2 class="section-title text-gradient" data-i18n="quiz-title">Khám Phá Lộ Trình Phù Hợp Cho Con</h2>
+        <p class="section-desc" data-i18n="quiz-desc">
+          Chọn cấp lớp, mức điểm hiện tại và mục tiêu để nhận ngay phân tích và lộ trình học tập tối ưu.
+        </p>
+      </div>
+
+      <div class="quiz-wrapper glass-panel">
+        <div class="quiz-steps">
+          <div class="quiz-step">
+            <label for="quiz-grade">1. Cấp lớp hiện tại:</label>
+            <select class="quiz-select" id="quiz-grade">
+              <option value="primary">Tiểu học (Lớp 3 - 5)</option>
+              <option value="grade-6-8" selected>THCS (Lớp 6 - 8)</option>
+              <option value="grade-9">Lớp 9 (Thi vào 10)</option>
+            </select>
+          </div>
+
+          <div class="quiz-step">
+            <label for="quiz-score">2. Mức điểm hiện tại trên lớp:</label>
+            <select class="quiz-select" id="quiz-score">
+              <option value="low">Dưới 6.5 (Mất gốc / Chưa vững ngữ pháp)</option>
+              <option value="mid" selected>6.5 - 7.5 (Nắm cơ bản, hay sai bẫy)</option>
+              <option value="high">8.0 - 9.0 (Khá giỏi, muốn bứt phá điểm 10)</option>
+            </select>
+          </div>
+
+          <div class="quiz-step">
+            <label for="quiz-goal">3. Mục tiêu học tập:</label>
+            <select class="quiz-select" id="quiz-goal">
+              <option value="foundation">Lấy lại gốc & Tự tin phát biểu</option>
+              <option value="target-8">Đạt điểm 8+ đều các bài kiểm tra</option>
+              <option value="target-10" selected>Đỗ vào 10 Chuyên / Trường điểm</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Quiz Dynamic Recommendation Output -->
+        <div class="quiz-result-box active" id="quiz-result">
+          <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; margin-bottom: 12px;">
+            <span class="badge-rainbow" id="quiz-result-tag">⭐ Gói Luyện Thi Vào 10 Chuyên Sâu</span>
+            <span style="color: var(--accent-cyan); font-size: 0.85rem; font-weight: 600;">Gợi ý tối ưu từ Thầy Hải</span>
+          </div>
+          <h3 id="quiz-result-title" style="margin-bottom: 10px; color: #fff;">Chiến Thuật Bứt Phá Điểm 9+, 10 Vào 10</h3>
+          <p id="quiz-result-desc" style="color: var(--text-secondary); line-height: 1.6; font-size: 0.95rem; margin-bottom: 18px;">
+            Phù hợp nhất cho học sinh lớp 9 chuẩn bị kỳ thi vào 10 công lập & chuyên. Lộ trình tập trung: Quét sạch 100% chuyên đề ngữ pháp trọng tâm, thành thạo kỹ năng xử lý các bẫy khó (Phrasal Verbs, Idioms, Điền từ, Đọc hiểu), rèn tư duy làm bài tốc độ cao với bộ đề độc quyền.
+          </p>
+          <a href="#contact" class="btn-primary" style="padding: 10px 22px; font-size: 0.9rem;">
+            Đăng Ký Tư Vấn Theo Lộ Trình Này ✦
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         CONTACT & CONSULTATION BOOKING
+         ==================================================================== -->
+    <section class="section-wrapper" id="contact">
+      <div class="section-header">
+        <span class="section-subtitle" data-i18n="contact-sub">Kết nối & Đồng hành</span>
+        <h2 class="section-title text-gradient" data-i18n="contact-title">Đặt Lịch Học Thử & Tư Vấn Miễn Phí</h2>
+        <p class="section-desc" data-i18n="contact-desc">
+          Liên hệ trực tiếp với thầy Hải để nhận buổi đánh giá năng lực đầu vào hoàn toàn miễn phí và tư vấn lộ trình học tập chi tiết.
+        </p>
+      </div>
+
+      <div class="contact-container">
+        <!-- Contact Information Card -->
+        <div class="glass-panel contact-info-card">
+          <h3 class="text-cyan">Thông Tin Liên Hệ Trực Tiếp</h3>
+          <p style="color: var(--text-secondary); font-size: 0.92rem; line-height: 1.6;">
+            Phụ huynh và các em học sinh có thể liên hệ trực tiếp qua Hotline, Zalo hoặc Email để nhận giải đáp nhanh nhất trong ngày.
+          </p>
+
+          <!-- Phone / Zalo -->
+          <a href="tel:0353266206" class="contact-method">
+            <div class="contact-icon">📞</div>
+            <div class="contact-details">
+              <h5>Điện thoại / Zalo</h5>
+              <p>0353 266 206</p>
+            </div>
+            <button class="copy-btn" data-copy="0353266206" title="Sao chép số điện thoại">Sao chép</button>
+          </a>
+
+          <!-- Email -->
+          <a href="mailto:luutuanhai29@gmail.com" class="contact-method">
+            <div class="contact-icon">✉️</div>
+            <div class="contact-details">
+              <h5>Email Học Thuật</h5>
+              <p>luutuanhai29@gmail.com</p>
+            </div>
+            <button class="copy-btn" data-copy="luutuanhai29@gmail.com" title="Sao chép Email">Sao chép</button>
+          </a>
+
+          <!-- Location -->
+          <div class="contact-method">
+            <div class="contact-icon">📍</div>
+            <div class="contact-details">
+              <h5>Khu Vực Dạy Trực Tiếp / Online</h5>
+              <p>Trung Liệt, Đống Đa, Hà Nội & Toàn quốc (Online)</p>
+            </div>
+          </div>
+
+          <!-- Birthday -->
+          <div class="contact-method">
+            <div class="contact-icon">🎂</div>
+            <div class="contact-details">
+              <h5>Ngày sinh</h5>
+              <p>21 / 04 / 2006</p>
+            </div>
+          </div>
+
+          <div style="margin-top: auto; padding: 14px; background: rgba(255, 255, 255, 0.04); border-radius: var(--radius-md); border-left: 3px solid var(--pride-green);">
+            <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5;">
+              ✨ <strong>Cam kết:</strong> Miễn phí 100% buổi test năng lực đầu vào và định hướng phương pháp học tập cho học sinh.
+            </p>
+          </div>
+        </div>
+
+        <!-- Consultation Booking Form Card -->
+        <div class="glass-panel booking-form-card">
+          <h3 class="text-purple" style="margin-bottom: 20px;">Gửi Yêu Cầu Tư Vấn Học Tập</h3>
+          <form id="consultation-form">
+            <div class="form-group">
+              <label for="parent-name" data-i18n="form-name">Họ và tên Phụ huynh / Học sinh *</label>
+              <input type="text" id="parent-name" class="form-control" placeholder="Ví dụ: Chị Lan / Anh Minh" required>
+            </div>
+
+            <div class="form-group">
+              <label for="parent-phone" data-i18n="form-phone">Số điện thoại / Zalo *</label>
+              <input type="tel" id="parent-phone" class="form-control" placeholder="Ví dụ: 0353 266 206" required>
+            </div>
+
+            <div class="form-group">
+              <label for="student-grade" data-i18n="form-grade">Học sinh đang học lớp mấy?</label>
+              <select id="student-grade" class="form-control">
+                <option value="grade-3">Lớp 3</option>
+                <option value="grade-4">Lớp 4</option>
+                <option value="grade-5">Lớp 5 (Chuẩn bị vào 6)</option>
+                <option value="grade-6">Lớp 6</option>
+                <option value="grade-7">Lớp 7</option>
+                <option value="grade-8">Lớp 8</option>
+                <option value="grade-9" selected>Lớp 9 (Luyện thi vào 10)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="learning-goal" data-i18n="form-goal">Mục tiêu học tập</label>
+              <select id="learning-goal" class="form-control">
+                <option value="into-10">Luyện thi vào 10 (Chinh phục 8.5+ hoặc Chuyên)</option>
+                <option value="recovery">Lấy lại nền tảng ngữ pháp căn bản</option>
+                <option value="advanced">Nâng cao kỹ năng đọc hiểu & giải đề thi trường điểm</option>
+                <option value="speaking-foundation">Cải thiện phát âm & tự tin giao tiếp</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="parent-note" data-i18n="form-note">Ghi chú thêm về học lực hoặc mong muốn</label>
+              <textarea id="parent-note" class="form-control" placeholder="Chia sẻ thêm về tình hình học tập hoặc kỳ vọng của phụ huynh..."></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary" style="width: 100%;" data-i18n="form-submit">
+              Gửi Đăng Ký Tư Vấn ✦
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         FOOTER
+         ==================================================================== -->
+    <footer class="site-footer">
+      <div class="pride-strip-line"></div>
+      <p class="footer-quote">
+        "Every star shines in its own spectrum — Let's discover your English brilliance together."
+      </p>
+      <p class="footer-copy">
+        © 2026 Lưu Tuấn Hải (Hai Luu). Handcrafted with cosmic starlight & pride rainbow vibes. All rights reserved.
+      </p>
+    </footer>
+
+  </div>
+
+  <!-- Dynamic Toast Notification Element -->
+  <div class="toast-msg" id="toast-notification">
+    <span>✨</span>
+    <span id="toast-text">Thông báo</span>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/starfield.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
